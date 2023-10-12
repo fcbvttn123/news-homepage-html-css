@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    font-family: 'Inter', sans-serif;
+    font-weight: var(--fw-regular);
+}
+
+body {
+    background-color: var(--Off-white);
+}
+
+.overlay {
+    display: none;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+/* Header */
+
+header {
+    width: 100%;
+}
+
+.wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    font-size: .9rem;
+    transition: 1s ease;
+}
+
+.links a {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.links a:hover {
+    color: var(--Soft-red);
+}
+
+.menu-icon-box, .menu-close-icon, .links .menu-close-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 630px) {
+    .links {
+        display: none;
+    }
+
+    .menu-icon-box {
+        display: block;
+    }
+
+    .links.appear {
+        position: absolute;
+        inset: 0;
+        background-color: var(--Off-white);
+        font-size: 1.2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 1.3rem;
+        padding-left: 2rem;
+        padding-top: 14rem;
+
+        transform: translateX(25%);
+    }
+
+    .links .menu-close-icon {
+        display: block;
+        position: absolute;
+        top: 23px;
+        right: 28%;
+    }
+
+    .overlay.appear {
+        display: block;
+        position: absolute;
+        inset: 0;
+        background: black;
+        opacity: .6;
+    }
+}

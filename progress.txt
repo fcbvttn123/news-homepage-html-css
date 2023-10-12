@@ -1,0 +1,7 @@
++ Done: 
+
+    + header part --> responsive 
+
++ Issues: 
+
+    + no animation applied when show menu bar on phone screen
