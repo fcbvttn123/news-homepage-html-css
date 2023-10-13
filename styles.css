@@ -42,7 +42,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .links {
@@ -108,4 +108,75 @@ header {
         background: black;
         opacity: .6;
     }
+}
+
+
+
+
+/* Main Section */
+
+main {
+    width: 100%;
+}
+
+.wrapper-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper-main :is(.container1, .container2) {
+    height: 100%;
+}
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1.75rem;
+    width: 50%;
+}
+
+.container1__img {
+    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+    height: 250px;
+}
+
+.container1__heading {
+    font-size: 3rem;
+    font-weight: var(--fw-extra-bold);
+    max-width: 50%;
+}
+
+.container1__detail {
+    color: var(--Dark-grayish-blue);
+    font-size: .9rem;
+    letter-spacing: 1px;
+    max-width: 45%;
+}
+
+.container1__detail button {
+    background-color: var(--Soft-red);
+    color: white;
+    font-weight: var(--fw-regular);
+    letter-spacing: 2px;
+    
+    display: grid;
+    place-content: center;
+    padding: .75rem 2.5rem;
+    margin-top: 2rem;
+
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.container1__detail button:hover {
+    background-color: black;
+    color: white;
 }
