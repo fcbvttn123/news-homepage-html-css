@@ -25,7 +25,7 @@ body {
 }
 
 .wrapper {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -124,28 +124,24 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 450px;
-
+    column-gap: 1.5rem;
+    
     margin-bottom: 3rem;
 }
 
-@media (max-width: 1040px) {
-    .wrapper-main {
-        height: fit-content;
-    }
-}
-
 .wrapper-main :is(.container1, .container2) {
-    height: 100%;
+    align-self: stretch;
 }
 
 .container1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     row-gap: 1.75rem;
-    max-width: 70%;
+
+    width: 70%;
+    max-width: 700px;
 }
 
 .container1__img {
@@ -201,7 +197,7 @@ main {
     background: var(--Very-dark-blue);
     color: white;
     padding: 1.5rem;
-    max-width: 25%;
+    font-size: 1.2rem;
 }
 
 .container2__box:nth-of-type(2) {
@@ -240,7 +236,87 @@ main {
     background-color: var(--Dark-grayish-blue);
 }
 
-@media (max-width: 1040px) {
+@media (min-width: 1600px) {
+    .container1 {
+        padding: 0 0;
+    }
+
+    .container1, 
+    .container2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* Bottom Section */
+
+.bottom-section {
+    width: 100%;
+}
+
+.wrapper-bottom {
+    margin-bottom: 3rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    column-gap: 1.5rem;
+}
+
+.wrapper-bottom__box {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    column-gap: 1rem;
+
+    max-width: 500px;
+}
+
+.wrapper-bottom__box:nth-of-type(1) .wrapper-bottom__box__img {
+    background-image: url("./assets/images/image-gaming-growth.jpg");
+}
+
+.wrapper-bottom__box:nth-of-type(2) .wrapper-bottom__box__img {
+    background-image: url("./assets/images/image-top-laptops.jpg");
+}
+
+.wrapper-bottom__box:nth-of-type(3) .wrapper-bottom__box__img {
+    background-image: url("./assets/images/image-retro-pcs.jpg");
+}
+
+.wrapper-bottom__box__img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 120px;
+    height: 100%;
+}
+
+.wrapper-bottom__box__detail p:nth-of-type(1) {
+    font-size: 1.7rem;
+    font-weight: var(--fw-bold);
+    color: var(--Grayish-blue);
+}
+
+.wrapper-bottom__box__detail p:nth-of-type(2) {
+    font-weight: var(--fw-bold);
+    margin: .5rem 0;
+
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.wrapper-bottom__box__detail p:nth-of-type(2):hover {
+    color: var(--Soft-red);
+}
+
+.wrapper-bottom__box__detail p:nth-of-type(3) {
+    color: var(--Dark-grayish-blue);
+}
+
+@media (max-width: 1133px) {
     .wrapper-main {
         display: flex;
         flex-direction: column;
@@ -254,6 +330,8 @@ main {
 
     .container1 {
         max-width: 100%;
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -268,5 +346,18 @@ main {
     .container2 {
         padding: 1.5rem;
         max-width: 100%;
+    }
+
+    .wrapper-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 0;
+        row-gap: 1.5rem;
+    }
+
+    .wrapper-bottom__box__img {
+        max-width: 90px;
+        height: 120px;
     }
 }

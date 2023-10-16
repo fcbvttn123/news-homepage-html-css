@@ -2,6 +2,8 @@
 
     + header part --> responsive 
 
+    + Update again RWD of main section
+
 + Issues: 
 
     + header 
@@ -13,3 +15,13 @@
     + main section 
 
         RWD between laptop screen and mobile screen
+
++ Notes 
+
+    + align-self: stretch
+
+        --> used to have the same height for both children elements inside flexbox parent
+
+    + align-content: space-between 
+
+        --> align-items does not have this value
