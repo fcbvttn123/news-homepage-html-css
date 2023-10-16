@@ -4,4 +4,12 @@
 
 + Issues: 
 
-    + no animation applied when show menu bar on phone screen
+    + header 
+
+        + no animation applied when show menu bar on phone screen
+
+        + vertical and horizontal scroll in phone screen 
+
+    + main section 
+
+        RWD between laptop screen and mobile screen

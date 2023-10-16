@@ -17,6 +17,7 @@
 
 body {
     background-color: var(--Off-white);
+    overflow-x: hidden;
 }
 
 .overlay {
@@ -123,6 +124,15 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 450px;
+
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 1040px) {
+    .wrapper-main {
+        height: fit-content;
+    }
 }
 
 .wrapper-main :is(.container1, .container2) {
@@ -135,7 +145,7 @@ main {
     justify-content: space-between;
     align-items: center;
     row-gap: 1.75rem;
-    width: 50%;
+    max-width: 70%;
 }
 
 .container1__img {
@@ -146,6 +156,12 @@ main {
 
     width: 100%;
     height: 250px;
+}
+
+@media (max-width: 880px) {
+    .container1__img {
+        background-image: url("./assets/images/image-web-3-mobile.jpg");
+    }
 }
 
 .container1__heading {
@@ -179,4 +195,78 @@ main {
 .container1__detail button:hover {
     background-color: black;
     color: white;
+}
+
+.container2 {
+    background: var(--Very-dark-blue);
+    color: white;
+    padding: 1.5rem;
+    max-width: 25%;
+}
+
+.container2__box:nth-of-type(2) {
+    margin: 1.5rem 0;
+}
+
+.container2 .container2__heading {
+    font-size: 1.7rem;
+    color: var(--Soft-orange);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+}
+
+.container2 .container2__box p:first-child {
+    font-weight: var(--fw-extra-bold);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.container2 .container2__box p:first-child:hover {
+    color: var(--Soft-orange);
+}
+
+.container2 .container2__box p:nth-child(2) {
+    color: var(--Grayish-blue);
+    margin: .4rem 0 1.5rem;
+}
+
+.container2 .container2__box p:last-child {
+    margin-bottom: 0;
+}
+
+.container2__box__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--Dark-grayish-blue);
+}
+
+@media (max-width: 1040px) {
+    .wrapper-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: fit-content;
+        row-gap: 3rem;
+    
+        margin-bottom: 3rem;
+    }
+
+    .container1 {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container1__heading, .container1__detail {
+        max-width: 100%;
+    }
+
+    .container2 {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
 }
